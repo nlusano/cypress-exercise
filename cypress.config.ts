@@ -2,8 +2,8 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    supportFile: "tests/support/e2e.ts",
-    specPattern: "tests/e2e/*.cy.{js,jsx,ts,tsx}",
+    supportFile: "cypress/support/e2e.ts",
+    specPattern: "cypress/e2e/*.cy.{js,jsx,ts,tsx}",
     baseUrl: "https://test-rpg.vercel.app",
     watchForFileChanges: false,
     screenshotsFolder: "tests/screenshot",
