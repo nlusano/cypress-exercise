@@ -1,0 +1,8 @@
+{
+  "name": "cypress-exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nlusano/cypress-exercise.git",
+  "author": "Nausicaa <nausicaa.lusano@nedap.com>",
+  "license": "MIT"
+}
