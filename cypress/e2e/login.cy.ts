@@ -28,10 +28,15 @@ describe("Login", () => {
     cy.get("@modal").should("be.visible");
     cy.get('input[type="email"]')
       .parent()
-      .should((parentDiv) => {
-        expect(parentDiv).to.contain("Email");
-        expect(parentDiv).to.contain("Required");
+      .then((parentDiv) => {
+        cy.wrap(parentDiv).find("label").should("contain", "Email");
+        cy.wrap(parentDiv).find("p").should("contain", "Required");
       });
+    // .should((parentDiv) => {
+    //   expect(parentDiv).to.contain("Email");
+    //   expect(parentDiv).to.contain("Required");
+    // });
+
     cy.get('input[type="password"]')
       .parent()
       .should((parentDiv) => {
