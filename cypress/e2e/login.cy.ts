@@ -1,8 +1,11 @@
 describe("Login", () => {
-  it("logins successfully with click on login btn", () => {
+  beforeEach(() => {
     cy.visit("/");
     cy.get('[data-testid="login-button"]').click();
     cy.get('div[role="dialog"]').as("modal").should("be.visible");
+  });
+
+  it("logins successfully with click on login btn", () => {
     cy.get('input[type="email"]')
       .as("emailField")
       .type("veryvalid@email.trustme");
@@ -20,10 +23,6 @@ describe("Login", () => {
   });
 
   it("should show an error message when providing neither email nor password", () => {
-    cy.visit("/");
-    cy.get('[data-testid="login-button"]').click();
-    cy.get('div[role="dialog"]').as("modal").should("be.visible");
-
     cy.get('button[type="submit"]').click();
 
     cy.get("@modal").should("be.visible");
@@ -42,9 +41,6 @@ describe("Login", () => {
   });
 
   it("should show an error message when providing only a valid email", () => {
-    cy.visit("/");
-    cy.get('[data-testid="login-button"]').click();
-    cy.get('div[role="dialog"]').as("modal").should("be.visible");
     cy.get('input[type="email"]')
       .as("emailField")
       .type("veryvalid@email.trustme");
