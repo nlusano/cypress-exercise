@@ -1,5 +1,3 @@
-import { HomePage } from "./pages";
-
 describe("Login", () => {
   it("logins successfully with click on login btn", () => {
     cy.visit("/");
