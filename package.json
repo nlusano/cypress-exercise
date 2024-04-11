@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:nlusano/cypress-exercise.git",
-  "author": "Nausicaa <nausicaa.lusano@nedap.com>",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "cypress": "^13.7.2"
+  },
+  "scripts": {
+    "cypress:open": "cypress open"
   }
 }
