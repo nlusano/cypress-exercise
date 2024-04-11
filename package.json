@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:nlusano/cypress-exercise.git",
   "author": "Nausicaa <nausicaa.lusano@nedap.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.7.2"
+  }
 }
