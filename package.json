@@ -6,7 +6,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^13.7.2"
+    "cypress": "^13.7.2",
+    "typescript": "^5.4.5"
   },
   "scripts": {
     "cy:open": "cypress open"
